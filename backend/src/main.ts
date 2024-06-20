@@ -14,6 +14,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useWebSocketAdapter(new IoAdapter(app));
   app.enableCors(corsOptions);
-  await app.listen(8080, '0.0.0.0'); // 백엔드 서버 포트
+  await app.listen(8080); // 백엔드 서버 포트
 }
 bootstrap();
